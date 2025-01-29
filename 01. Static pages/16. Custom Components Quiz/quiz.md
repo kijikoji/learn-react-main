@@ -1,7 +1,8 @@
 1. What is a React component?
-
+   a function that return jsx to be rendered in a root
 
 2. What's wrong with this code?
+
 ```
 function myComponent() {
     return (
@@ -10,7 +11,10 @@ function myComponent() {
 }
 ```
 
+the my in myComponent needs to be capitalized. the "'" single quote won't compile properly
+
 3. What's wrong with this code?
+
 ```
 function Header() {
     return (
@@ -22,3 +26,5 @@ function Header() {
 
 root.render(Header())
 ```
+
+heard() in the root.render() should be writen in the more html like convention of <Header />
