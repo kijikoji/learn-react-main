@@ -12,3 +12,11 @@ Hints:
 * You can also set the `width` attribute of the image element
   just like in HTML. In the slide, I have it set to 40px
  */
+  import { createRoot } from "react-dom/client"
+  const root = createRoot(document.getElementById("root"))
+  
+  root.render(
+      <div>
+          <img src="react-logo.png" width="40px"/>
+      </div>
+  )
