@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "react": "19.0.0-rc-8b08e99e-20240713",
-    "react-dom": "19.0.0-rc-8b08e99e-20240713",
-    "vite": "latest"
+    "react-dom": "19.0.0-rc-8b08e99e-20240713"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "*"
+    "@vitejs/plugin-react": "*",
+    "vite": "^6.0.11"
   }
 }
