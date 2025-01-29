@@ -8,11 +8,40 @@ const root = createRoot(document.getElementById("root"))
  *   "Pricing", "About", and "Contact"
  */
 
+/**
+ * Challenge 2:
+ * 
+ * Using flexbox, line up the `li`s horizontally and put them inline
+ * with the React logo.
+ * 
+ * NOTE: for practice's sake, don't select any
+ * elements, but use classes for all styling.
+ */
+
+/**
+ * Challenge3:
+ * 
+ * Move the `width` style off the JSX and into CSS with a dedicated
+ * className on the img element, and change the width to 55px instead
+ */
+
+function Nav() {
+    return (
+        <nav>
+            <ul  className="nav-list flex-container">
+                <li>Priceing</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    )
+}
+
 function Header() {
     return (
         <header>
-            <img src="react-logo.png" width="40px" alt="React logo" />
-            
+            <img src="react-logo.png" className="react-logo" alt="React logo" />
+            <Nav/>
         </header>
     )
 }

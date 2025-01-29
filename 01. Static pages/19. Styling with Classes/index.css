@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
 }
+header {
+    display: flex;
+    justify-content: space-between;
+}
 
 body {
     padding: 20px;
@@ -11,4 +15,20 @@ body {
 
 h1 {
     margin-top: 30px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav-list > * {
+    padding-left: 10px;
+}
+
+.react-logo {
+    width: 55px;
+    height: 55px;
 }
