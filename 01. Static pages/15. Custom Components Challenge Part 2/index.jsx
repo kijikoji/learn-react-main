@@ -20,12 +20,21 @@ Part 2:
 
 function Page() {
     return (
-        <ol>
-            <li>React is a popular library, so I will be able to
-            fit in with all the coolest devs out there! 😎</li>
-            <li>I am more likely to get a job as a front end developer
-            if I know React</li>
-        </ol>
+        <main>
+            <header>
+                <img src="react-logo.png" width="40px" alt="react logo looks like a atom in all blue"/>
+            </header>
+            <h1>Reasons I&#39;m excited to learn React</h1>
+            <ol>
+                <li>React is a popular library, so I will be able to
+                fit in with all the coolest devs out there! 😎</li>
+                <li>I am more likely to get a job as a front end developer
+                if I know React</li>
+            </ol>
+            <footer>
+                <p1>© 2025 villagran development. All rights reserved.</p1>
+            </footer>
+        </main>
     )
 }
 
