@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 90px;
+
+}
+
+.react-logo {
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-right: 5px;
+
+}
+
+.header-bar {
+    background-color: rgb(33, 34, 42);
+}
+
+.nav-title {
+    color: rgb(0, 216, 255);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
