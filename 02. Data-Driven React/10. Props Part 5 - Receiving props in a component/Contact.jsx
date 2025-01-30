@@ -7,27 +7,29 @@
  */
 
 export default function Contact(props) {
-    console.log(props)
+    console.log(props.img)
+    console.log(props["img"])
+    const img_alt = "Photo of " + props.name
     return (
         <article className="contact-card">
             <img
-                src="./images/mr-whiskerson.png"
-                alt="Photo of Mr. Whiskerson"
+                src={props.img}
+                alt={img_alt}
             />
-            <h3>Mr. Whiskerson</h3>
+            <h3>{props.name}</h3>
             <div className="info-group">
                 <img
                     src="./images/phone-icon.png"
                     alt="phone icon"
                 />
-                <p>(212) 555-1234</p>
+                <p>{props.phone}</p>
             </div>
             <div className="info-group">
                 <img
                     src="./images/mail-icon.png"
                     alt="mail icon"
                 />
-                <p>mr.whiskaz@catnap.meow</p>
+                <p>{props.email}</p>
             </div>
         </article>
     )
