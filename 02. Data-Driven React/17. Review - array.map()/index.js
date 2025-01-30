@@ -5,7 +5,10 @@ Given an array of numbers, return an array of each number, squared
 const nums = [1, 2, 3, 4, 5]
 // -->       [1, 4, 9, 16, 25]
 // Your code here
-
+function arrSquared(lis){
+    return lis.map(x => x**2)
+}
+console.log(arrSquared(nums))
 
 
 
@@ -18,7 +21,7 @@ the first letter of each string is capitalized
 const names = ["alice", "bob", "charlie", "danielle"]
 // -->        ["Alice", "Bob", "Charlie", "Danielle"]
 // Your code here
-
+console.log(names.map(x => x[0].toLocaleUpperCase() + x.slice(1)))
 
 
 
@@ -34,5 +37,6 @@ return: ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
 const pokemon = ["Bulbasaur", "Charmander", "Squirtle"]
 // -->          ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
 // Your code here
+console.log(pokemon.map(x => "<p>" + x + "</p>"))
 
 
