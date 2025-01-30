@@ -9,6 +9,10 @@ export default function Main() {
     
     function handleChange(event) {
         const {value} = event.currentTarget
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            topText: value
+        }))
         /**
          * Challenge: update the topText value in the meme state
          * object every time the topText input box is changed
