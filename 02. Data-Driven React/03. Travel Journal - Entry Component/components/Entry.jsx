@@ -13,3 +13,21 @@
  *   currently are, so don't worry about the fact that you're hard-coding all
  *   this data into the component.
  */
+
+export default function Entry() {
+    return (
+        <entry>
+            <img src="./images/mount-fuji.png" alt="mount fuji" />
+            <div >
+                <div className="entry_location">
+                    <img src="./images/marker.png" alt="location marker" />
+                    <div>JAPAN</div>
+                    <div>View on Google Maps</div>
+                </div>
+                <h1>Mount Fuji</h1>
+                <div className="entry_dates">12 Jan, 2021 - 24 Jan, 2021</div>
+                <p>Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.</p>
+            </div>
+        </entry>
+    )
+}

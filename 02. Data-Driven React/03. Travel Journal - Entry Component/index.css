@@ -21,3 +21,14 @@ header > h1 {
     font-weight: 500;
     font-family: Inter;
 }
+
+entry {
+    display: flex;
+    margin: 40px;
+    height: 168px;
+}
+
+.entry_location {
+    display: flex;
+    flex-direction: row;
+}
