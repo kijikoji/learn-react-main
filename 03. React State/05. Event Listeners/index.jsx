@@ -9,14 +9,20 @@ function App() {
   /**
    * Challenge: add our new function to the button
    */
+
+  /**
+   * Challenge: Log something to the console when the mouse
+   * hovers over the image
+   */
   
   return (
     <main className="container">
       <img
+        onMouseEnter={() => console.log("something")}
         src="https://picsum.photos/640/360"
         alt="Placeholder image from Picsum"
       />
-      <button onClick={}>Click me</button>
+      <button onClick={handleClick}>Click me</button>
     </main>
   )
 }
