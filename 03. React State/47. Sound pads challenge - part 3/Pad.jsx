@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 export default function Pad(props) {
     /**
      * Challenge part 3:
@@ -8,6 +10,7 @@ export default function Pad(props) {
     return (
         <button 
             style={{backgroundColor: props.color}}
+            className={props.on ? "on" : null}
         ></button>
     )
 }
