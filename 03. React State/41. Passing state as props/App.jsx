@@ -10,6 +10,7 @@ export default function App() {
     function subtract() {
         setCount(prevCount => prevCount - 1)
     }
+
     
     /**
      * Challenge:
@@ -23,7 +24,16 @@ export default function App() {
      *   to its `number` prop.
      * - After doing this, everything should be working the
      *   same as before.
-     */
+    */
+   
+   function Count(props){
+        console.log(props)
+       return (
+           <>
+                <h2 className="count">{props.count}</h2>
+           </>
+       )
+   }
 
     return (
         <main className="container">
@@ -34,7 +44,7 @@ export default function App() {
                     aria-label="Decrease count"
                 >-</button>
 
-                <h2 className="count">{count}</h2>
+                <Count count={count}/>
 
                 <button
                     className="plus"
