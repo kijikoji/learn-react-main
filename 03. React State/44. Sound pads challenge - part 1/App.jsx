@@ -1,6 +1,11 @@
-import pads from "./pads"
+import { useState } from "react"
+import initpads from "./pads"
 
 export default function App() {
+
+    const [ pads, setpads ] = useState(initpads)
+    const padsArray = pads.map(x => <button key={x.id}>{x.id}</button>)
+
     /**
      * Challenge part 1:
      * 1. Initialize state with the default value of the
@@ -13,7 +18,7 @@ export default function App() {
     return (
         <main>
             <div className="pad-container">
-                {/* <button>s go here */}
+                {padsArray}
             </div>
         </main>
     )
