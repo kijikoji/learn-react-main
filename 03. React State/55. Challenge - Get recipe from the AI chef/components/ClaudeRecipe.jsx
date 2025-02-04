@@ -1,8 +1,8 @@
-export default function ClaudeRecipe() {
+export default function ClaudeRecipe(props) {
     return (
         <section>
             <h2>Chef Claude Recommends:</h2>
-            <article className="suggested-recipe-container" aria-live="polite">
+            {/* <article className="suggested-recipe-container" aria-live="polite">
                 <p>Based on the ingredients you have available, I would recommend making a simple a delicious <strong>Beef Bolognese Pasta</strong>. Here is the recipe:</p>
                 <h3>Beef Bolognese Pasta</h3>
                 <strong>Ingredients:</strong>
@@ -30,7 +30,8 @@ export default function ClaudeRecipe() {
                     <li>Add the Bolognese sauce to the cooked pasta and toss to combine.</li>
                     <li>Serve hot, garnished with additional fresh basil or grated Parmesan cheese if desired.</li>
                 </ol>
-            </article>
+            </article> */}
+            {props.recipeText}
         </section>
     )
 }
