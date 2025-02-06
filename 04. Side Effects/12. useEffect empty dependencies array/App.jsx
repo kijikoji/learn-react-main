@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 export default function App() {
     const [starWarsData, setStarWarsData] = React.useState({})
@@ -6,12 +6,13 @@ export default function App() {
     
     console.log("Rendered!")
     
-    React.useEffect(() => {
-        console.log("Effect ran")
-        fetch("https://swapi.dev/api/people/1")
-            .then(res => res.json())
-            .then(data => setStarWarsData(data))
-    }, [count])
+    /**
+     * Challenge: re-write the useEffect
+     * It should run any time `count` changes
+     * For now, just console.log("Effect function ran")
+     */
+
+    useEffect( () => console.log("Effect function ran") , [count])
     
     return (
         <div>
