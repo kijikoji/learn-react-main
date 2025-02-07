@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Main() {
     const [meme, setMeme] = useState({
@@ -22,6 +22,15 @@ export default function Main() {
      * Instead, use `.then()` to resolve the promises
      * from using `fetch`. We'll learn why after this challenge.
      */
+
+    const [memes, setMemes] = useState([])
+
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setMemes(data.data.memes))
+    }, [])
+
     
     
     
