@@ -1,5 +1,5 @@
 import Die from "./Die"
-
+import { useState } from "react"
 /**
  * Challenge:
  * 
@@ -20,20 +20,17 @@ export default function App() {
     }
     
     /** map over dice here */
+    const [diceValues, setDiceValues] = useState(generateAllNewDice())
+
+    function diceList(){
+        let l = diceValues;
+        return l.map(x => <Die value={x}></Die>)
+    }
     
     return (
         <main>
             <div className="dice-container">
-                <Die value={1} />
-                <Die value={2} />
-                <Die value={3} />
-                <Die value={4} />
-                <Die value={5} />
-                <Die value={6} />
-                <Die value={1} />
-                <Die value={1} />
-                <Die value={1} />
-                <Die value={1} />
+                {diceList()}
             </div>
         </main>
     )
