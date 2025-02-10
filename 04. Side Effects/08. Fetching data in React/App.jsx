@@ -9,14 +9,17 @@ export default function App(props) {
      * and display it to the page. (Just replace the hard-coded
      * object inside the `<pre>` element with the data)
      */
+
+    // this will continusly re-render the page 
     
     fetch("https://swapi.dev/api/people/1")
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setStarWarsData(data.name))
+
     
     return (
         <div>
-            <pre>{JSON.stringify({ name: "Luke" }, null, 2)}</pre>
+            <pre >{JSON.stringify({ name: starWarsData }, null, 2)}</pre>
         </div>
     )
 }
