@@ -30,7 +30,23 @@ export default function App() {
      */ 
 
     function hold(id) {
-        console.log(id)
+        // console.log(id)
+        setDice((prevDice) => {
+            let nextDice = []
+            prevDice.forEach((die) => {
+                if (die.id == id){
+                    nextDice.push({
+                        value: die.value,
+                        isHeld: !die.isHeld,
+                        id: die.id 
+                    })
+                }
+                else {
+                    nextDice.push(die)
+                }
+            })
+            return nextDice
+        })
     }
 
     const diceElements = dice.map(dieObj => (
