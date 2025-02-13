@@ -10,6 +10,12 @@ import Die from "./Die"
  */
 
 export default function App() {
+    
+    function generateAllNewDice() {
+        console.log([...Array(10).keys()]
+        .map( _ => (Math.ceil(Math.random() * 5))))
+    }
+    generateAllNewDice()
     return (
         <main>
             <div className="dice-container">
