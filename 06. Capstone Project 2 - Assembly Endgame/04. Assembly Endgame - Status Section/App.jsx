@@ -16,6 +16,10 @@ export default function AssemblyEndgame() {
                 <h1>Assembly: Endgame</h1>
                 <p>Guess the word within 8 attempts to keep the 
                 programming world safe from Assembly!</p>
+                <section className="game-status">
+                    <h1>You win!</h1>
+                    <h3>Well done!🎉</h3>
+                </section>
             </header>
         </main>
     )
