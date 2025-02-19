@@ -79,3 +79,24 @@ section.word > span {
     border-bottom: 1px solid #F9F4DA;
     
 }
+
+.keyboard {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-width: 480px;
+    align-items: center;
+    justify-content: center;
+}
+
+.keyboard > button {
+    height: 40px;
+    width: 40px;
+    background-color: #323232;
+    color: #F9F4DA;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.125rem;
+    cursor: pointer;
+}

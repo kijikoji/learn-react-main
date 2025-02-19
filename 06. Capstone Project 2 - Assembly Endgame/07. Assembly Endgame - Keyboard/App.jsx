@@ -14,6 +14,10 @@ export default function AssemblyEndgame() {
     
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
+    const keyboard = alphabet.split("").map(letter => (
+        <button key={letter}>{letter.toUpperCase()}</button>
+    ))
+
     const languageElements = languages.map(lang => {
         const styles = {
             backgroundColor: lang.backgroundColor,
@@ -50,6 +54,9 @@ export default function AssemblyEndgame() {
             </section>
             <section className="word">
                 {letterElements}
+            </section>
+            <section className="keyboard">
+                {keyboard}
             </section>
         </main>
     )
