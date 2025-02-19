@@ -11,7 +11,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-}
+ }
 
 header {
     text-align: center;
@@ -37,6 +37,7 @@ section.game-status {
     color: #F9F4DA;
     border-radius: 4px;
     margin-block: 30px;
+    width: 100%;
 }
 
 section.game-status > p {
@@ -45,4 +46,38 @@ section.game-status > p {
 section.game-status > h2 {
     font-size: 1.25rem;
     margin: 5px
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    max-width: 253px;
+    font-family: Hanken Grotesk;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15.64px;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
+
+.languages > div {
+    background-color: #1E1E1E;
+    color: #D9D9D9;
+    border-radius: 4px;
+    margin: 1px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }

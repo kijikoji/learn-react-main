@@ -1,4 +1,5 @@
 import React from "react"
+import { languages } from "/languages"
 
 /**
  * Goal: Build out the main parts of our app
@@ -11,6 +12,7 @@ import React from "react"
  * Hint for layout: use a flex container that can wrap
  * to layout the languages.
  */
+console.log(languages)
 
 export default function AssemblyEndgame() {
     return (
@@ -24,6 +26,9 @@ export default function AssemblyEndgame() {
                 <h2>You win!</h2>
                 <p>Well done! 🎉</p>
             </section>
+            <div className="languages"> {languages.map(lang => 
+                <div key={lang.name} style={{color: lang.color, backgroundColor: lang.backgroundColor}}>{lang.name}</div>)}
+            </div>
         </main>
     )
 }
