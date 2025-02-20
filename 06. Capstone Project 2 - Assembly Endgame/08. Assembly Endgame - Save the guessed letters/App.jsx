@@ -4,14 +4,24 @@ import { languages } from "./languages"
 /**
  * Goal: Allow the user to start guessing the letters
  * 
- * Challenge: TBA
+ * Challenge: Create a new array in state to hold user's
+ * guessed letters. When the user chooses a letter, add
+ * that letter to this state array.
  * 
- * Think: what would be the best way to store the user's
- * guessed letters?
+ * Don't worry about whether it was a right or wrong 
+ * guess yet.
  */
 
 export default function AssemblyEndgame() {
     const [currentWord, setCurrentWord] = useState("react")
+    const [guessedLetters, setGuessedLetters] = useState([])
+
+    const addLetter = (event) => {
+        const letter = event.target.textContent
+        !guessedLetters.includes(letter) ? setGuessedLetters(prevLetters => [...prevLetters, letter]):
+        null
+    }
+    console.log(guessedLetters)
     
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
@@ -36,7 +46,7 @@ export default function AssemblyEndgame() {
     ))
     
     const keyboardElements = alphabet.split("").map(letter => (
-        <button key={letter}>{letter.toUpperCase()}</button>
+        <button key={letter} onClick={addLetter}>{letter.toUpperCase()}</button>
     ))
 
     return (
