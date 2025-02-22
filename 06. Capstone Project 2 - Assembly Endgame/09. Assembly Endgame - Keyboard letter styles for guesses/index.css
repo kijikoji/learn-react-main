@@ -89,10 +89,23 @@ section.keyboard {
     margin-bottom: 36px;
 }
 
+.key{
+    background-color: #FCBA29;
+}
+
+.key--guessed {
+    background-color: #a91010;
+    color: #F9F4DA;
+}
+
+.key--correct {
+    background-color: #10A95B;
+    color: #F9F4DA;
+}
+
 section.keyboard > button {
     height: 35px;
     width: 35px;
-    background-color: #FCBA29;
     border: 1px solid #D7D7D7;
     border-radius: 3px;
     cursor: pointer;
