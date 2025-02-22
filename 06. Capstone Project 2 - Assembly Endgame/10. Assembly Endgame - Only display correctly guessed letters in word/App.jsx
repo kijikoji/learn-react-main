@@ -40,7 +40,7 @@ export default function AssemblyEndgame() {
     })
 
     const letterElements = currentWord.split("").map((letter, index) => (
-        <span key={index}>{letter.toUpperCase()}</span>
+        <span key={index}>{ guessedLetters.includes(letter) ? letter.toUpperCase(): null}</span>
     ))
 
     const keyboardElements = alphabet.split("").map(letter => {
