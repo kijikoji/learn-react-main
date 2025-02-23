@@ -22,6 +22,21 @@ export default function AssemblyEndgame() {
     // Derived values
     const wrongGuessCount = 
         guessedLetters.filter(letter => !currentWord.includes(letter)).length
+
+    const wordGuessed = () => {
+        let guesses = true;
+        currentWord.split("").forEach(letter => !guessedLetters.includes(letter) ? guesses = false : null )
+        return guesses
+    }
+ 
+    const isGameOver = () => {
+        if (wrongGuessCount >= 8 || wordGuessed())
+            // console.log("game over")
+            return true
+        return false
+    }
+
+   isGameOver()
     
     // Static values
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -98,7 +113,7 @@ export default function AssemblyEndgame() {
             <section className="keyboard">
                 {keyboardElements}
             </section>
-            <button className="new-game">New Game</button>
+            {isGameOver() && <button className="new-game">New Game</button>}
         </main>
     )
 }
