@@ -91,9 +91,9 @@ export default function AssemblyEndgame() {
                 programming world safe from Assembly!</p>
             </header>
             
-            <section className="game-status">
-                <h2>You win!</h2>
-                <p>Well done! 🎉</p>
+            <section className={clsx("game-status", isGameWon && "won", isGameLost && "lost")}>
+                <h2>{isGameWon ? "You win!" : isGameLost ? "You lose!" : null}</h2>
+                <p>{isGameWon ? "Well done! 🎉" : isGameLost ? "Oh no! 😢" : null}</p>
             </section>
             
             <section className="language-chips">
