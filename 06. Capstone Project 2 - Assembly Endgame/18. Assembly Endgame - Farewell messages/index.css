@@ -54,6 +54,10 @@ section.game-status.lost {
     background-color: #BA2A2A;
 }
 
+section.game-status.farewell {
+    background-color: #9652ce;
+}
+
 section.game-status > p {
     margin: 5px;
 }

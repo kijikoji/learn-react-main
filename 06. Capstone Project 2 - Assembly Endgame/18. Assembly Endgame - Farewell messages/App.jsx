@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { clsx } from "clsx"
 import { languages } from "./languages"
+import { getFarewellText } from "./utils"
 
 /**
  * Challenge: Bid farewell to each programming language
@@ -83,12 +84,14 @@ export default function AssemblyEndgame() {
 
     const gameStatusClass = clsx("game-status", {
         won: isGameWon,
-        lost: isGameLost
+        lost: isGameLost,
+        farewell: guessedLetters.length == 0 ? null : 
+            !currentWord.includes(guessedLetters[guessedLetters.length - 1])
     })
 
     function renderGameStatus() {
         if (!isGameOver) {
-            return null
+            return (wrongGuessCount == 0) ? null : getFarewellText(languages[wrongGuessCount - 1].name)
         }
 
         if (isGameWon) {
