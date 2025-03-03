@@ -138,8 +138,10 @@ export default function AssemblyEndgame() {
         return null
     }
 
+    console.log("currentWord", currentWord)
     return (
         <main>
+            {isGameWon && <Confetti />}
             <header>
                 <h1>Assembly: Endgame</h1>
                 <p>Guess the word within 8 attempts to keep the
